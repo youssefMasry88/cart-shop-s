@@ -547,6 +547,3 @@ document.addEventListener("click", (e) => {
     document.querySelector(".cart_popup").classList.remove("showPopupCart");
   }
 });
-setTimeout(() => {
-  loadingPage.classList.add("hide");
-}, 1000);
