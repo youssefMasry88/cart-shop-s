@@ -1,0 +1,101 @@
+.showPopup {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+        
+        .show {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+        
+        .showPopupCart {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+        
+        .bg-linear-to-b {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+        }
+
+.loading-page.hide {
+opacity: 0;
+pointer-events: none;
+}
+.loading-page-path.hide h2{
+    opacity: 0;
+}
+.loading-page.hide .loading-page-path:nth-of-type(1) {
+    height: 0;
+}
+.loading-page.hide .loading-page-path:nth-of-type(2) {
+    height: 0;
+
+}
+
+.loading-page-path:nth-of-type(1){
+    transition-delay: 4s;
+}
+.loading-page-path:nth-of-type(2){
+    transition-delay: 3s;
+}
+.loading-page {
+    transition-delay: 2s;
+}
+
+
+
+.loader1 {
+  /* color: #a9131f; */
+  size: 90px;
+  width: 90px;
+  height: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.loader1 span {
+  width: 100%;
+  height: 100%;
+  /* background-color:#a9131f;  */
+  animation: keyframes-blink 0.6s alternate infinite linear;
+}
+
+.loader1 span:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.loader1 span:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.loader1 span:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.loader1 span:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.loader1 span:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.loader1 span:nth-child(6) {
+  animation-delay: 600ms;
+}
+
+@keyframes keyframes-blink {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.5) rotate(5deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+

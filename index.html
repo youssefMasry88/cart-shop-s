@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youssef's Cart Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-gray-200">
+ <header class="flex items-center min-h-15 bg-white">
+        <div class="container mx-auto flex items-center justify-between px-2">
+            <h1 class="uppercase">Cart Shop</h1>
+            <div class="header-items xl:flex lg:flex hidden items-center gap-10">
+                <div class="header-items-cart relative cursor-pointer">
+                    <span class="absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M423.3 440.7c0 25.3-20.3 45.6-45.6 45.6s-45.8-20.3-45.8-45.6 20.6-45.8 45.8-45.8c25.4 0 45.6 20.5 45.6 45.8zm-253.9-45.8c-25.3 0-45.6 20.6-45.6 45.8s20.3 45.6 45.6 45.6 45.8-20.3 45.8-45.6-20.5-45.8-45.8-45.8zm291.7-270C158.9 124.9 81.9 112.1 0 25.7c34.4 51.7 53.3 148.9 373.1 144.2 333.3-5 130 86.1 70.8 188.9 186.7-166.7 319.4-233.9 17.2-233.9z"></path>
+                    </svg>
+                </div>
+                <div class="header-items-wishlist relative cursor-pointer">
+                    <span class="absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="1.2" viewBox="0 0 512 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                    </svg>
+                </div>
+                <button class="py-1.5 px-4 bg-red-500 text-white rounded-3xl cursor-pointer">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product-popup duration-300 opacity-0 pointer-events-none fixed top-0 left-0 bg-black/50 w-full h-full z-10 flex items-center justify-center">
+            
+        </div>
+        <section class="cart_popup opacity-0 pointer-events-none fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.6)] z-10">
+            <div class="cart-items-container absolute top-0 right-0 w-[35%] h-full bg-white p-10">
+                <div class="close-cart cursor-pointer text-xl font-bold">X</div>
+                <h2 class="text-2xl capitalize mb-8">Cart Items</h2>
+                <div class="cart-item-content h-[70vh] overflow-y-auto">
+                </div>
+                <div class="cart-item-details mt-8 border-t border-black/10 pt-8">
+                    <div class="details flex justify-between text-lg font-bold">
+                        <span>Total</span>
+                        <span class="total">$0</span>
+                    </div>
+                    <div class="details flex justify-between mt-4">
+                        <button class="py-2 px-4 bg-red-500 text-white rounded-3xl">Checkout</button>
+                        <button class="py-2 px-4 bg-gray-200 rounded-3xl">View Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop py-[5em]">
+            <div class="container mx-auto px-2">
+                <h2 class="text-center mb-4 text-3xl uppercase">Shop Page</h2>
+                <div class="shop-header relative z-1 flex justify-between gap-4 mb-4">
+                    <div class="shop-header-search relative">
+                        <div class="w-[14em] h-10 border border-black/10 bg-white rounded-3xl overflow-hidden">
+                            <input type="text" name="" id="" placeholder="Search...." class="w-full h-full px-4 outline-0" />
+                        </div>
+                        <div class="shop-header-search-container bg-white w-full border border-black/10 rounded-3xl min-h-40 absolute top-11 left-0 opacity-0 pointer-events-none overflow-y-auto max-h-60">
+                            
+                        </div>
+                    </div>
+                    <div class="shop-header-category bg-white border border-black/10 px-4 rounded-3xl">
+                        <select class="shop-categories outline-0 capitalize flex items-center h-full gap-4"></select>
+                    </div>
+                </div>
+                <div class="shop-container-items grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 mt-8"></div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="Script/main.js"></script>
+  </body>
+  </html>
+  
+  <!-- <section
+    class="loading-page fixed top-0 left-0 w-full h-full z-[50] flex items-center justify-center duration-1000"
+  >
+    <div
+      class="loading-page-path absolute z-[1] top-0 left-0 w-full h-full bg-red-500 duration-800"
+    ></div>
+    <div
+      class="loading-page-path absolute z-[1] top-0 left-0 w-full h-full bg-white duration-600"
+    ></div>
+      <h2 class="relative z-[2] text-8xl duration-400">الستاره</h2> 
+  
+      <div class=" loader1 relative z-[2] duration-500 ">
+      <span class="bg-red-500"></span>
+      <span class="bg-red-500"></span>
+      <span class="bg-red-500"></span>
+      <span class="bg-red-500"></span>
+      <span class="bg-red-500"></span>
+      <span class="bg-red-500"></span>
+    </div> 
+  </section> -->
